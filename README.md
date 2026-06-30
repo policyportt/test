@@ -11,35 +11,30 @@ python3 -m http.server 8000
 # visit http://localhost:8000
 ```
 
-## Deploy to Vercel
+## Deploy to GitHub Pages
 
-This is a static site — Vercel serves the files as-is (no build command, no framework).
+This is a static site, so GitHub Pages serves the files directly from the repo —
+no build step. The `.nojekyll` file tells Pages to skip Jekyll processing and
+serve the files as-is.
 
-### Option A — Vercel CLI
+### One-time setup
+
+1. Push your changes to the `main` branch (see below).
+2. On GitHub, open the repo → **Settings** → **Pages**.
+3. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
+4. Set **Branch** to `main` and the folder to `/ (root)`, then click **Save**.
+5. Wait ~1 minute. Your site goes live at:
+
+   ```
+   https://policyportt.github.io/test/
+   ```
+
+After this, every push to `main` automatically redeploys the site.
+
+### Push changes
 
 ```bash
-npm i -g vercel   # if not already installed
-vercel            # preview deploy (follow the prompts)
-vercel --prod     # production deploy
+git add -A
+git commit -m "Update site"
+git push
 ```
-
-When prompted:
-- **Set up and deploy?** → Yes
-- **Which scope?** → your account/team
-- **Link to existing project?** → No (first time)
-- **In which directory is your code located?** → `./`
-- Build settings → accept the defaults (no build command needed)
-
-### Option B — Git integration (recommended)
-
-1. Push this repo to GitHub/GitLab/Bitbucket.
-2. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
-3. Framework Preset: **Other**. Leave Build Command and Output Directory empty.
-4. Click **Deploy**. Every push to the main branch then deploys to production automatically.
-
-## Configuration
-
-`vercel.json` sets:
-- `cleanUrls` — serve `/about` instead of `/about.html`
-- Long-lived caching for `.css` / `.js` assets
-- Baseline security headers
