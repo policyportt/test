@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumen — a simple, beautiful starting point for your next idea." />
+  <title>Lumen — Build something bright</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="brand">
+        <span class="brand__dot"></span> Lumen
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="eyebrow">✨ New · v1.0 is here</p>
+      <h1 class="hero__title">Build something <span class="grad">bright</span> today.</h1>
+      <p class="hero__sub">
+        Lumen is a lightweight starting point for your next website — fast, responsive,
+        and beautiful out of the box. No frameworks, no clutter.
+      </p>
+      <div class="hero__cta">
+        <a href="#features" class="btn btn--primary">Explore features</a>
+        <a href="#contact" class="btn btn--ghost">Contact us →</a>
+      </div>
+      <div class="hero__stats">
+        <div><strong>0kb</strong><span>dependencies</span></div>
+        <div><strong>100</strong><span>Lighthouse</span></div>
+        <div><strong>&lt;1s</strong><span>load time</span></div>
+      </div>
+    </div>
+    <div class="hero__glow" aria-hidden="true"></div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section__title">Everything you need to start</h2>
+      <p class="section__lead">Thoughtful defaults so you can focus on what matters.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="card__icon">⚡</div>
+          <h3>Blazing fast</h3>
+          <p>Pure HTML and CSS — no heavy bundles. It loads instantly, everywhere.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">📱</div>
+          <h3>Fully responsive</h3>
+          <p>Looks great on phones, tablets, and desktops with a fluid layout.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🎨</div>
+          <h3>Easy to theme</h3>
+          <p>One set of CSS variables controls colors, spacing, and radius.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🌙</div>
+          <h3>Dark mode</h3>
+          <p>A built-in toggle that remembers your visitor's preference.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">♿</div>
+          <h3>Accessible</h3>
+          <p>Semantic markup, keyboard support, and sensible contrast ratios.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🧩</div>
+          <h3>Zero config</h3>
+          <p>Open the file in a browser. That's the whole setup.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section class="section section--alt" id="showcase">
+    <div class="container showcase">
+      <div class="showcase__text">
+        <h2 class="section__title">Designed to feel effortless</h2>
+        <p>
+          Clean typography, gentle motion, and a calm color palette make every page
+          feel polished. Tweak a few variables and make it your own in minutes.
+        </p>
+        <ul class="ticks">
+          <li>Smooth scroll & subtle animations</li>
+          <li>Reusable button and card components</li>
+          <li>Mobile-first navigation</li>
+        </ul>
+        <a href="#pricing" class="btn btn--primary">See pricing</a>
+      </div>
+      <div class="showcase__art" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="window">
+          <div class="window__bar"><span></span><span></span><span></span></div>
+          <div class="window__body">
+            <div class="line w-80"></div>
+            <div class="line w-60"></div>
+            <div class="line w-90"></div>
+            <div class="line w-40"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section__title">Simple pricing</h2>
+      <p class="section__lead">Pick a plan. Cancel anytime.</p>
+      <div class="grid grid--3">
+        <article class="price">
+          <h3>Starter</h3>
+          <p class="price__amt"><span>$0</span>/mo</p>
+          <ul>
+            <li>1 project</li>
+            <li>Community support</li>
+            <li>Basic components</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">Get started</a>
+        </article>
+        <article class="price price--featured">
+          <div class="price__badge">Most popular</div>
+          <h3>Pro</h3>
+          <p class="price__amt"><span>$12</span>/mo</p>
+          <ul>
+            <li>Unlimited projects</li>
+            <li>Priority support</li>
+            <li>All components & themes</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Start free trial</a>
+        </article>
+        <article class="price">
+          <h3>Team</h3>
+          <p class="price__amt"><span>$29</span>/mo</p>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Team collaboration</li>
+            <li>Dedicated support</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">Contact sales</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="section section--cta" id="contact">
+    <div class="container cta">
+      <h2>Ready to build something bright?</h2>
+      <p>Drop your email and we'll send you the starter kit.</p>
+      <form class="cta__form" id="signupForm">
+        <input type="email" id="email" placeholder="you@example.com" required aria-label="Email address" />
+        <button type="submit" class="btn btn--primary">Send it →</button>
+      </form>
+      <p class="cta__note" id="formNote" role="status"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="brand"><span class="brand__dot"></span> Lumen</a>
+      <p>© <span id="year"></span> Lumen. Built with care.</p>
+      <div class="footer__links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
